@@ -1,0 +1,5 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/day_cell" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:layout_margin="1dp" android:padding="2dp" android:orientation="vertical" android:background="@drawable/day_background">
+    <TextView android:id="@+id/day_number" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#233B31" android:textSize="9sp" android:includeFontPadding="false" android:textStyle="bold" android:maxLines="1"/>
+    <TextView android:id="@+id/day_items" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:textColor="#477766" android:textSize="8sp" android:includeFontPadding="false" android:maxLines="3" android:ellipsize="end"/>
+    <TextView android:id="@+id/day_overflow" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#8F5A27" android:textSize="8sp" android:includeFontPadding="false" android:maxLines="1"/>
+</LinearLayout>

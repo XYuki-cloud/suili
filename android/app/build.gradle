@@ -1,0 +1,21 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'app.flexible.calendar'
+    compileSdk 35
+    defaultConfig { applicationId 'app.flexible.calendar'; minSdk 26; targetSdk 35; versionCode 9; versionName '0.5.0'; testInstrumentationRunner 'app.flexible.calendar.ProtocolInstrumentation' }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+    buildTypes {
+        release { minifyEnabled false }
+        // Explicit opt-in for Xiaomi's review/test environment. Normal APKs stay Android-only.
+        miuiExperimental { initWith debug; matchingFallbacks = ['debug'] }
+    }
+    sourceSets { main { assets.srcDir layout.buildDirectory.dir('generated/plannerAssets') } }
+}
+
+// Copy source files on every relevant build, so the phone runs the same planner as the browser.
+def plannerAssets = tasks.register('syncPlannerAssets', Sync) {
+    into layout.buildDirectory.dir('generated/plannerAssets/planner')
+    from('../../web') { into 'web'; include '*.html', '*.css', '*.mjs' }
+    from('../../shared') { into 'shared'; include '*.mjs' }
+}
+tasks.named('preBuild').configure { dependsOn plannerAssets }

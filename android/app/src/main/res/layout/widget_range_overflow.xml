@@ -1,0 +1,1 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/range_overflow" android:layout_width="match_parent" android:layout_height="16dp" android:paddingLeft="4dp" android:textSize="9sp" android:textColor="#8F5A27" android:maxLines="1"/>

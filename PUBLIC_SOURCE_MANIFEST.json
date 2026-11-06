@@ -1,0 +1,846 @@
+{
+  "schemaVersion": 1,
+  "license": "Apache-2.0",
+  "files": [
+    {
+      "path": ".editorconfig",
+      "mode": "100644",
+      "sha256": "c7abd56678d1e72fc7aeaa59cf30b4413da3079626932ec7d92e408a6d797872",
+      "bytes": 149
+    },
+    {
+      "path": ".gitattributes",
+      "mode": "100644",
+      "sha256": "a7525e6647b37e1751dbc938e056442c9ea2707e8babf30c6639e6d3057af841",
+      "bytes": 489
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "sha256": "9170e82f2ece7c76bff200586b0e94e13779c8b8df4d6f1731cd316e915ef681",
+      "bytes": 961
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "sha256": "b8b010c5c37c1f029c85abe097c6be1ce0d1e493848a627710e6d67e4cba016d",
+      "bytes": 2114
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "sha256": "5c18fd75716cf9cbf6c9ace509ec7f260f8da1b3e1184d4a851720bb5d8baec4",
+      "bytes": 1732
+    },
+    {
+      "path": "Install-Shortcut.ps1",
+      "mode": "100644",
+      "sha256": "e470bfc87349973e63febe7f475de2a7ef743edec3dbf9a44d9cc7cb92251eee",
+      "bytes": 1566
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "path": "NOTICE",
+      "mode": "100644",
+      "sha256": "d4fac22ae81eaa6bad69c86702f318ed08d0fbc024ee1387b8c65054c4ae4a0d",
+      "bytes": 313
+    },
+    {
+      "path": "PRIVACY.md",
+      "mode": "100644",
+      "sha256": "83848321b1cf257bb8cf73ee73773e41a7e049c47f71e33f098e55d7c55804b9",
+      "bytes": 2668
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "sha256": "b7505509b405a882229162b96d14f9de5a86836bed1c1bf3544b89f10a4a85df",
+      "bytes": 6537
+    },
+    {
+      "path": "SECURITY.md",
+      "mode": "100644",
+      "sha256": "ba9fe98775981e6e2d0ecde679fa151b63d0e271932ade299711792768b32c8a",
+      "bytes": 699
+    },
+    {
+      "path": "Start-Calendar.ps1",
+      "mode": "100644",
+      "sha256": "9f6b5e016aeddbdf8eb7a8b54d04cd9feb70d40f131385150d3f740f4b75b532",
+      "bytes": 6009
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "mode": "100644",
+      "sha256": "83985d33f4bfb741884e87a63a5bd03283ac6ace7cccf7f497568161c3dafc7e",
+      "bytes": 1244
+    },
+    {
+      "path": "android/.gitignore",
+      "mode": "100644",
+      "sha256": "7f12af1a729f9ee76a2d6d0ca8fdf7bd4db75ec6e0e94815ed8d901cc1e368c7",
+      "bytes": 377
+    },
+    {
+      "path": "android/README.md",
+      "mode": "100644",
+      "sha256": "2cf0ffc19e60a028eb07d543b27ecf36d84f846d1839f432af4a5d501fc46e2d",
+      "bytes": 7656
+    },
+    {
+      "path": "android/app/build.gradle",
+      "mode": "100644",
+      "sha256": "2bd9cab74e0b8a604ab946aec7783fee613fd242b04849766364ea9bb395812b",
+      "bytes": 1173
+    },
+    {
+      "path": "android/app/src/androidTest/AndroidManifest.xml",
+      "mode": "100644",
+      "sha256": "a0a66b83cdf216b531d8b3eb6053fa0bece7066dab37bfbecb6f3aedc5d72fde",
+      "bytes": 445
+    },
+    {
+      "path": "android/app/src/androidTest/java/app/flexible/calendar/ProtocolInstrumentation.java",
+      "mode": "100644",
+      "sha256": "f4aa08e232a5199a4deb54328222e0bd5a9dde3a4091a73d9320daf3e2dc8b72",
+      "bytes": 16116
+    },
+    {
+      "path": "android/app/src/androidTest/java/app/flexible/calendar/WebDavInstrumentation.java",
+      "mode": "100644",
+      "sha256": "853fd4b0f471a1c154f2d2b0de07cf79556a87e69ef07a6c0b8ba077de2c5f49",
+      "bytes": 6286
+    },
+    {
+      "path": "android/app/src/androidTest/java/app/flexible/calendar/WidgetRenderInstrumentation.java",
+      "mode": "100644",
+      "sha256": "106e3a1c75555752f6e6c2afaa971d165dfdcd7c843d0a66f2543b5301cffc11",
+      "bytes": 18977
+    },
+    {
+      "path": "android/app/src/main/AndroidManifest.xml",
+      "mode": "100644",
+      "sha256": "ed8ffa86c13a8feaa18990752a71d62f3eab45bcc2fa34364ef4fedb45c73d8d",
+      "bytes": 2161
+    },
+    {
+      "path": "android/app/src/main/java/app/flexible/calendar/CalendarWidget.java",
+      "mode": "100644",
+      "sha256": "49b6e787eb2d08d08e778c2ed04bc876343b91bfba96e3648dbd8d7ace74db29",
+      "bytes": 16887
+    },
+    {
+      "path": "android/app/src/main/java/app/flexible/calendar/Core.java",
+      "mode": "100644",
+      "sha256": "c8e99fb5c98addde93a99b85c49dc3846f49336b530572430c546d76d8ab1215",
+      "bytes": 13816
+    },
+    {
+      "path": "android/app/src/main/java/app/flexible/calendar/HttpSyncTransport.java",
+      "mode": "100644",
+      "sha256": "70c2059ec08615b8cc811861e071d26b9174401b6e3bcbfddf2cb2424360c07f",
+      "bytes": 3636
+    },
+    {
+      "path": "android/app/src/main/java/app/flexible/calendar/JsonCodec.java",
+      "mode": "100644",
+      "sha256": "3ba60d2bc88c346c465978808eee47a0c9e960c47fa052368917e80a7933f0f8",
+      "bytes": 4420
+    },
+    {
+      "path": "android/app/src/main/java/app/flexible/calendar/MainActivity.java",
+      "mode": "100644",
+      "sha256": "84e93324448c036b009f2061952499cf91b70856877ca30976108a4b054b0436",
+      "bytes": 19719
+    },
+    {
+      "path": "android/app/src/main/java/app/flexible/calendar/MiuiCalendarWidget.java",
+      "mode": "100644",
+      "sha256": "2cb9a51cef934bf506e3df495357b59b8958717aefe30142c6bf213f9bc58274",
+      "bytes": 2632
+    },
+    {
+      "path": "android/app/src/main/java/app/flexible/calendar/MiuiSupport.java",
+      "mode": "100644",
+      "sha256": "540b2e15535171fee58f4d13a459b790def796a0ca16c5c657b6bdc0ef23ccd7",
+      "bytes": 1922
+    },
+    {
+      "path": "android/app/src/main/java/app/flexible/calendar/PasswordVault.java",
+      "mode": "100644",
+      "sha256": "a5b63285f6910775a019ec5f2dd0453e745e1ba3e81274e3bae0ba19f41747a5",
+      "bytes": 2547
+    },
+    {
+      "path": "android/app/src/main/java/app/flexible/calendar/PlannerActivity.java",
+      "mode": "100644",
+      "sha256": "d45e08357ace2790680f5325db485192b36e6bc243c451dc5a2e40efa2b52abb",
+      "bytes": 11985
+    },
+    {
+      "path": "android/app/src/main/java/app/flexible/calendar/PlannerAssets.java",
+      "mode": "100644",
+      "sha256": "ad32ccb05d69128c0f42a22da670350cd6d45e69f7979bc702dde2f7e3ca0bb8",
+      "bytes": 1333
+    },
+    {
+      "path": "android/app/src/main/java/app/flexible/calendar/Store.java",
+      "mode": "100644",
+      "sha256": "581aed74e3963de093750f1806a37afd5b793bfb02d2779a8f5df14f4c7a2bab",
+      "bytes": 13762
+    },
+    {
+      "path": "android/app/src/main/java/app/flexible/calendar/SyncConfig.java",
+      "mode": "100644",
+      "sha256": "9268c7d774c14020666bc60d731cd222b4d409973132d271f76abc0361d2d18b",
+      "bytes": 2337
+    },
+    {
+      "path": "android/app/src/main/java/app/flexible/calendar/SyncCoordinator.java",
+      "mode": "100644",
+      "sha256": "714787824e97ebe973bf3671f3b11afe4a2eaaa740bb90e2d6b29f8aafdda0f8",
+      "bytes": 6805
+    },
+    {
+      "path": "android/app/src/main/java/app/flexible/calendar/SyncJobService.java",
+      "mode": "100644",
+      "sha256": "d2f630fb5898b2d222b97286eb23b3aace571e57f77e91b9c7ca38dacabcf893",
+      "bytes": 811
+    },
+    {
+      "path": "android/app/src/main/java/app/flexible/calendar/SyncSettingsDialog.java",
+      "mode": "100644",
+      "sha256": "dba3d4f3641394f5f0390ae0f538fd0dcafef9f1f1c13f2adf17a0275010ce3c",
+      "bytes": 8095
+    },
+    {
+      "path": "android/app/src/main/java/app/flexible/calendar/SyncTransport.java",
+      "mode": "100644",
+      "sha256": "3cecef39e2bda4660f18836a39f57d6dadc4af52e963b41dc39d9f7f547115be",
+      "bytes": 186
+    },
+    {
+      "path": "android/app/src/main/java/app/flexible/calendar/WebDavTransport.java",
+      "mode": "100644",
+      "sha256": "4d4eb261f0d68d8fe338b4feb74a10ec14b91102b28d7adb63a0c96bd545e5e4",
+      "bytes": 10788
+    },
+    {
+      "path": "android/app/src/main/java/app/flexible/calendar/WidgetLayoutPolicy.java",
+      "mode": "100644",
+      "sha256": "6f61c6c9eb70d2b84f18a12ee57e13644bf0587f360d0aa52af8b9912550bcde",
+      "bytes": 1989
+    },
+    {
+      "path": "android/app/src/main/java/app/flexible/calendar/WidgetPinReceiver.java",
+      "mode": "100644",
+      "sha256": "9c9aaf252d34f33832f22702169aa757d83e0588f124f56eb852d30dbea1cec9",
+      "bytes": 883
+    },
+    {
+      "path": "android/app/src/main/java/app/flexible/calendar/WidgetPinStatus.java",
+      "mode": "100644",
+      "sha256": "1d9de420f589f5dffe7b0e0879facee708ca3c981194490f0c35254aea033b5b",
+      "bytes": 1136
+    },
+    {
+      "path": "android/app/src/main/java/app/flexible/calendar/WidgetSupport.java",
+      "mode": "100644",
+      "sha256": "ff2503809522f35fe7707dc290d73fe4bc46965a404313c3736ca838fb2d2807",
+      "bytes": 11646
+    },
+    {
+      "path": "android/app/src/main/res/drawable-nodpi/widget_preview_image.png",
+      "mode": "100644",
+      "sha256": "a5faa090349572b52d490104009b54b7b823d7c4c12f04fd591ebd670d2d5efa",
+      "bytes": 17949
+    },
+    {
+      "path": "android/app/src/main/res/drawable/day_background.xml",
+      "mode": "100644",
+      "sha256": "b4337cacda590e6a3a875f24d27086204687e8b40187df061df87ab9a77adc5c",
+      "bytes": 138
+    },
+    {
+      "path": "android/app/src/main/res/drawable/ic_calendar.xml",
+      "mode": "100644",
+      "sha256": "8938d0df5a7099541e492069da94eacf02a16bd80ef610a5ef378ac4a7e0fc99",
+      "bytes": 511
+    },
+    {
+      "path": "android/app/src/main/res/drawable/range_background.xml",
+      "mode": "100644",
+      "sha256": "a2be19a46c863944784d60694c647919184c40b0d14adf49ae3f0d3d9dbc1596",
+      "bytes": 138
+    },
+    {
+      "path": "android/app/src/main/res/drawable/today_background.xml",
+      "mode": "100644",
+      "sha256": "e87a410594523fc0f74c2ddf1aa4b8b107fe8997a407788274ebb461e7474c20",
+      "bytes": 191
+    },
+    {
+      "path": "android/app/src/main/res/drawable/widget_background.xml",
+      "mode": "100644",
+      "sha256": "de67ace05ea034a67fe0ac43170fa400457a0c15758706105d625c71f50e49b5",
+      "bytes": 192
+    },
+    {
+      "path": "android/app/src/main/res/layout/widget.xml",
+      "mode": "100644",
+      "sha256": "ace94fa38ea350dbc6b014498a5b9b6736c1e55033533dfe1935577796f8a156",
+      "bytes": 3282
+    },
+    {
+      "path": "android/app/src/main/res/layout/widget_compact.xml",
+      "mode": "100644",
+      "sha256": "c1a65569769207c7588ee425d063de1958cb72d60621bfb9ae1239d26bef56c5",
+      "bytes": 3192
+    },
+    {
+      "path": "android/app/src/main/res/layout/widget_day.xml",
+      "mode": "100644",
+      "sha256": "06a9ee8274b4e5815027112d8abada767bb874cb78203a939f098324664b02a8",
+      "bytes": 1076
+    },
+    {
+      "path": "android/app/src/main/res/layout/widget_preview.xml",
+      "mode": "100644",
+      "sha256": "8e6f7cd6a22ef8219124cbaf1a41ac9675a73183a12def2c04b5c1f7133c7bbf",
+      "bytes": 12088
+    },
+    {
+      "path": "android/app/src/main/res/layout/widget_range_bar_1.xml",
+      "mode": "100644",
+      "sha256": "31d48d601aa249ae48951095985b836b963bc11a8a7699ac3a8db392fcc1f162",
+      "bytes": 500
+    },
+    {
+      "path": "android/app/src/main/res/layout/widget_range_bar_2.xml",
+      "mode": "100644",
+      "sha256": "e3b4a855dd1c53b4d4a60fbda1a1a82f545a23bb80561788d3797e3a44df5376",
+      "bytes": 500
+    },
+    {
+      "path": "android/app/src/main/res/layout/widget_range_bar_3.xml",
+      "mode": "100644",
+      "sha256": "d82b32bd0872909c01e5be2389dd73aecf9c27097f938b01fded1d7b3bc600a0",
+      "bytes": 500
+    },
+    {
+      "path": "android/app/src/main/res/layout/widget_range_bar_4.xml",
+      "mode": "100644",
+      "sha256": "e91d127b990a604503d33668ffb3d3ecccb452a63b2fdbdc494efbfe227d0096",
+      "bytes": 500
+    },
+    {
+      "path": "android/app/src/main/res/layout/widget_range_bar_5.xml",
+      "mode": "100644",
+      "sha256": "6de8fe37a8ec04148152c385b37025c918bdcf62e5ad8ee9dbb4a3d7a19f62a9",
+      "bytes": 500
+    },
+    {
+      "path": "android/app/src/main/res/layout/widget_range_bar_6.xml",
+      "mode": "100644",
+      "sha256": "5efacd139ceff9343bfdf7adca0a63be4d6f01f241eec07fe88c668743d07b85",
+      "bytes": 500
+    },
+    {
+      "path": "android/app/src/main/res/layout/widget_range_bar_7.xml",
+      "mode": "100644",
+      "sha256": "753bf3865caf32a15db2afec253c6031a82024fda278cc8101f1e559bfefc94e",
+      "bytes": 500
+    },
+    {
+      "path": "android/app/src/main/res/layout/widget_range_overflow.xml",
+      "mode": "100644",
+      "sha256": "a44978cd918e401a01a4ba39cb8941fd943210296a916677a5c96a0958b24497",
+      "bytes": 267
+    },
+    {
+      "path": "android/app/src/main/res/layout/widget_range_row.xml",
+      "mode": "100644",
+      "sha256": "0e72ca9680efb7990ff054c84133e04458cfcc052ca1e022319d09d0f74d8e1d",
+      "bytes": 206
+    },
+    {
+      "path": "android/app/src/main/res/layout/widget_range_spacer.xml",
+      "mode": "100644",
+      "sha256": "81b6d2377c374179818584d9cc43dc95ae7fdfe929e2b637b7863ffacad48f73",
+      "bytes": 161
+    },
+    {
+      "path": "android/app/src/main/res/layout/widget_week.xml",
+      "mode": "100644",
+      "sha256": "726936b9ba7f1862dd1bcd161898b66aa1e12b9a7d32467995f186468df12dea",
+      "bytes": 893
+    },
+    {
+      "path": "android/app/src/main/res/layout/widget_week_compact.xml",
+      "mode": "100644",
+      "sha256": "ce586644b39becf151965bd44e61dbcaff9d4a7c888ceb0629a0dc680f78e0ec",
+      "bytes": 890
+    },
+    {
+      "path": "android/app/src/main/res/values/strings.xml",
+      "mode": "100644",
+      "sha256": "1d8a60739d06f870e89a3a0e7034191763d9ba6b6ccf728654ab4c78f4d189fb",
+      "bytes": 188
+    },
+    {
+      "path": "android/app/src/main/res/values/styles.xml",
+      "mode": "100644",
+      "sha256": "1e94d7a3f8e6906a2b848051e842a5338c9f09898b4dbaca174c3426a7ba77a0",
+      "bytes": 453
+    },
+    {
+      "path": "android/app/src/main/res/values/widget_styles.xml",
+      "mode": "100644",
+      "sha256": "d5b32a0912efe1a76d501f16909c7d5cd76a280f1e1db09c7c02812e0a73d166",
+      "bytes": 374
+    },
+    {
+      "path": "android/app/src/main/res/xml/calendar_widget.xml",
+      "mode": "100644",
+      "sha256": "049724c414ab91d9356f2d9d4f0a13f5463d5b10980b5ac5debd7c97df4d227f",
+      "bytes": 585
+    },
+    {
+      "path": "android/app/src/main/res/xml/miui_calendar_widget.xml",
+      "mode": "100644",
+      "sha256": "a9f95b3dea8d268a021d7c67b52fdade55b5b2f72edfd6a1d9791955d36c3dd1",
+      "bytes": 517
+    },
+    {
+      "path": "android/app/src/miuiExperimental/AndroidManifest.xml",
+      "mode": "100644",
+      "sha256": "3ec5ecd3cbee49c292f36508bdde55f6899427709597ef4fe4ba4f6fe30fee5a",
+      "bytes": 1023
+    },
+    {
+      "path": "android/build.gradle",
+      "mode": "100644",
+      "sha256": "5a2b60e74fb16fe7cd032ad7b178123a544081570b1e39115bfa52338a6e2553",
+      "bytes": 69
+    },
+    {
+      "path": "android/build.ps1",
+      "mode": "100644",
+      "sha256": "7c68dc74362bf3d13cd4e0a2f04fccf8ae56a60907ef0144d0d80c2fb309ef2a",
+      "bytes": 760
+    },
+    {
+      "path": "android/gradle.properties",
+      "mode": "100644",
+      "sha256": "b1d34c9ed7ef503458c7d8205056f58efb7e61ae41a70f49542453bee28ec0c0",
+      "bytes": 141
+    },
+    {
+      "path": "android/gradle/wrapper/gradle-wrapper.jar",
+      "mode": "100644",
+      "sha256": "7d3a4ac4de1c32b59bc6a4eb8ecb8e612ccd0cf1ae1e99f66902da64df296172",
+      "bytes": 43764
+    },
+    {
+      "path": "android/gradle/wrapper/gradle-wrapper.properties",
+      "mode": "100644",
+      "sha256": "89032df14851e71a09ea7eaaffde8c85d3e806cb5365bd747ae9ec843dcae1dd",
+      "bytes": 340
+    },
+    {
+      "path": "android/gradlew",
+      "mode": "100755",
+      "sha256": "b187b4c52e749f5760afdd6fadc31b2a98ad35fb249bf0dff03b72650f320409",
+      "bytes": 8733
+    },
+    {
+      "path": "android/gradlew.bat",
+      "mode": "100644",
+      "sha256": "94102713eb8fb22d032397924c0f38ab2da783ba60d07054339f1190a0c4e2cd",
+      "bytes": 2843
+    },
+    {
+      "path": "android/settings.gradle",
+      "mode": "100644",
+      "sha256": "227052394cd52b49a71537126e133170f9a88be1b5d81680498d0c53e054aa27",
+      "bytes": 438
+    },
+    {
+      "path": "android/test-core.ps1",
+      "mode": "100644",
+      "sha256": "7ac06d9d8163a93ec8e08ee849f8780c03c45fb90f92b5643589861509887a41",
+      "bytes": 830
+    },
+    {
+      "path": "android/test-webdav.ps1",
+      "mode": "100644",
+      "sha256": "05908ee501e690d987277a0fe2744df5bec23ca399a9363e59d8a3d3cbc3f36b",
+      "bytes": 1501
+    },
+    {
+      "path": "android/test-widget.ps1",
+      "mode": "100644",
+      "sha256": "83fadd2de66f86228c8ba7dc887f077e4028159cf0b221f8907caacf0fa99365",
+      "bytes": 1051
+    },
+    {
+      "path": "android/tests/CoreTest.java",
+      "mode": "100644",
+      "sha256": "5154726785527a6d2f053bb0637fd9aa8fe6cc8eff279530d81502458f1f48ba",
+      "bytes": 6269
+    },
+    {
+      "path": "android/tests/MultiplePeriodsTest.java",
+      "mode": "100644",
+      "sha256": "7d2fe7d04cf6b245842216d5a7512ab9f1b6277418af3cb8e959a36152d9b4ea",
+      "bytes": 8477
+    },
+    {
+      "path": "android/tests/PlannerAssetsTest.java",
+      "mode": "100644",
+      "sha256": "50f0061b8c4aa3787be3b8949f37910dd894bb3b998ce283a72980be68971f19",
+      "bytes": 1938
+    },
+    {
+      "path": "android/tests/ProtocolRoundtrip.java",
+      "mode": "100644",
+      "sha256": "da09ecf835ad882fc2bc73dc1ebe15632b18a0046a149855cd10833a4fc1cf9e",
+      "bytes": 1050
+    },
+    {
+      "path": "android/tests/WebDavTransportTest.java",
+      "mode": "100644",
+      "sha256": "8600c802cdc64fc8ea6b95a4a99bb73b7f2b5877bb4db3aa1efc59523a40e189",
+      "bytes": 13258
+    },
+    {
+      "path": "android/tests/WidgetLayoutPolicyTest.java",
+      "mode": "100644",
+      "sha256": "c551c24dc02725147383ff247334a16ea0ccd2453a3f0da96c005e34adc31c34",
+      "bytes": 2041
+    },
+    {
+      "path": "android/tests/WidgetPinStatusTest.java",
+      "mode": "100644",
+      "sha256": "2722ad7165afa8bb88a422b5b4cec381c8a458b65a672425a09f1eb653a630ed",
+      "bytes": 1233
+    },
+    {
+      "path": "android/tests/fixtures/multiple-periods.json",
+      "mode": "100644",
+      "sha256": "9cdc28bf3cd815e9b4cadb27e54a423aacac957ae34a5c21af8fefe583adecbd",
+      "bytes": 1516
+    },
+    {
+      "path": "android/tests/multiple-periods-roundtrip.mjs",
+      "mode": "100644",
+      "sha256": "68017f3721d1971e0fae75255f630911f115a8c3bb3f9f160ec38cd7912b4d30",
+      "bytes": 3764
+    },
+    {
+      "path": "android/tests/run-multiple-periods.ps1",
+      "mode": "100644",
+      "sha256": "65c1c38a864ea94789c844a7c12b4a338bf09a4b6cb00f7f1571346d9e55ad8f",
+      "bytes": 1393
+    },
+    {
+      "path": "android/tools/Resolve-JavaHome.ps1",
+      "mode": "100644",
+      "sha256": "afed96c5805f11e914aef484da4bd2f0472fd58aa1f4687ad52282a6851e1b79",
+      "bytes": 2053
+    },
+    {
+      "path": "android/tools/generate-widget-preview.ps1",
+      "mode": "100644",
+      "sha256": "1c6691a8cbcaadd88d73a116c97b470a3997cca1a73ee66d047a070dc55cace9",
+      "bytes": 2451
+    },
+    {
+      "path": "docs/development.md",
+      "mode": "100644",
+      "sha256": "7aafd12b5b5bfcf8e5a0d273d68afef89f451886fd22d2b8b41aa1886fc5647e",
+      "bytes": 9174
+    },
+    {
+      "path": "docs/getting-started.md",
+      "mode": "100644",
+      "sha256": "3714648c4216b92d6394773c13c3b4c3a4fd7b26cbdef9f49adfca913c9890b0",
+      "bytes": 13417
+    },
+    {
+      "path": "docs/hyperos.md",
+      "mode": "100644",
+      "sha256": "24d52fe36bf3ea96d9ffb2e20e63ba56f5cd07d99c90db8c72776a5a9989e1ba",
+      "bytes": 3552
+    },
+    {
+      "path": "docs/images/android-app.png",
+      "mode": "100644",
+      "sha256": "dd54d2ac01e610fd708173bbd3fd21ff3a28559599ab64d58f269ae998413ca5",
+      "bytes": 218185
+    },
+    {
+      "path": "docs/images/android-widget-settings.png",
+      "mode": "100644",
+      "sha256": "3ce9bacea8fd196a5754bbe33ad26e21c1c66bf86d6f1a894f081eb277ff9fc3",
+      "bytes": 304413
+    },
+    {
+      "path": "docs/images/android-widget.png",
+      "mode": "100644",
+      "sha256": "a5faa090349572b52d490104009b54b7b823d7c4c12f04fd591ebd670d2d5efa",
+      "bytes": 17949
+    },
+    {
+      "path": "docs/images/desktop.png",
+      "mode": "100644",
+      "sha256": "a8fcc54071b8bcffe3d621391f7e003da4826f31a6fac2796dcc1921d980b82e",
+      "bytes": 75815
+    },
+    {
+      "path": "docs/images/mobile.png",
+      "mode": "100644",
+      "sha256": "1df65f33d8882ad0c72b176bacdac0ad56bbb564f2cc984bad75a19a4bb8d22f",
+      "bytes": 51461
+    },
+    {
+      "path": "docs/publishing.md",
+      "mode": "100644",
+      "sha256": "c576720b7ca75cb386c6aa4fa513c97b43717e8ef0e9f9769d2d4eb589e28f24",
+      "bytes": 2797
+    },
+    {
+      "path": "docs/sync-contract.md",
+      "mode": "100644",
+      "sha256": "cfc51075bd1d36d60ad3446a8ac559822fe4a9fb3bcf503541d6d32d89bd1631",
+      "bytes": 8590
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "sha256": "326fce66fde69c5fd4cb0aede9c8468efb9a98bf033ee7b83b688caa1b3bf028",
+      "bytes": 551
+    },
+    {
+      "path": "scripts/public-source.mjs",
+      "mode": "100644",
+      "sha256": "f6b2c6e33cf6336630ee42f996b60b43fe775c9aee99a740a40bf0bc52c25d4c",
+      "bytes": 9762
+    },
+    {
+      "path": "server/credential-store.mjs",
+      "mode": "100644",
+      "sha256": "1582010f8aeb046d33917294479da0ac4eef7e75e51dee17603b3f98ec7ed7c0",
+      "bytes": 3935
+    },
+    {
+      "path": "server/server.mjs",
+      "mode": "100644",
+      "sha256": "1ca5662cba5821288c2f2fa16d23d59c221cc015272f9a92935f0d78932a0502",
+      "bytes": 15177
+    },
+    {
+      "path": "server/webdav-service.mjs",
+      "mode": "100644",
+      "sha256": "7e8d29d5e3d396bb6df473353e7efc7d8087198549a6d2f5a2399b5f508f191a",
+      "bytes": 6455
+    },
+    {
+      "path": "shared/core.mjs",
+      "mode": "100644",
+      "sha256": "d307bd497fcf18186e7b05ca15603e76fdfe2e7ba09b4ef661cc6b052aa91d58",
+      "bytes": 10710
+    },
+    {
+      "path": "shared/transports.mjs",
+      "mode": "100644",
+      "sha256": "105aa61e5ef63e729bb593632148f1b0b786ca645cfa5d794151fdf9e9dc032c",
+      "bytes": 10574
+    },
+    {
+      "path": "tests/calendar.test.mjs",
+      "mode": "100644",
+      "sha256": "57cc6a53bc21dd8f4b696a25296233dc3feb0d7b56f9ae6c30d20345d7b98df7",
+      "bytes": 6254
+    },
+    {
+      "path": "tests/core.test.mjs",
+      "mode": "100644",
+      "sha256": "8f660593dfafbd81e97dedd62c63d8881e1135140d4a8e8a8684a254bf929b28",
+      "bytes": 11921
+    },
+    {
+      "path": "tests/credential-store.test.mjs",
+      "mode": "100644",
+      "sha256": "ab7e46f1f327c5c8c660faa17ab746cbf8b52380e1fe9d0fb9a7d1cb5f0ba196",
+      "bytes": 2611
+    },
+    {
+      "path": "tests/drag-plan.test.mjs",
+      "mode": "100644",
+      "sha256": "32c1eb8168197716ee37c7ab34c1a2d9a7cf0045f6b174417551b4558cb7348f",
+      "bytes": 12611
+    },
+    {
+      "path": "tests/helpers/webdav-fixture.mjs",
+      "mode": "100644",
+      "sha256": "b26ff650cc2b8ff1e6806b19ad46c85ce9f5113451b486d9f11c57506ad1904e",
+      "bytes": 5070
+    },
+    {
+      "path": "tests/launch-target.test.mjs",
+      "mode": "100644",
+      "sha256": "277bbd27cc2ec2a8bf569c14b72b3b6876b6086553805b1a3640da204df8a8fe",
+      "bytes": 2972
+    },
+    {
+      "path": "tests/local-store.test.mjs",
+      "mode": "100644",
+      "sha256": "22be00f9b14c026ac0b0ede7ae522474abd28c55a1a5839f07c4dd89a72ce26e",
+      "bytes": 3108
+    },
+    {
+      "path": "tests/native-store.test.mjs",
+      "mode": "100644",
+      "sha256": "fc5775026e2497d68a765e630e13c07b5cac9b3570efe642818f62a845bc3b4c",
+      "bytes": 4555
+    },
+    {
+      "path": "tests/public-source-hardening.test.mjs",
+      "mode": "100644",
+      "sha256": "99529146a1ae99d370ceabe8ef0cdf62815c8873de3495c0a051ce8573861fed",
+      "bytes": 7032
+    },
+    {
+      "path": "tests/public-source.test.mjs",
+      "mode": "100644",
+      "sha256": "2316bbd8afe031a56d3db329c4b1f616dd98eefd645a60783850de7486bde2cb",
+      "bytes": 5000
+    },
+    {
+      "path": "tests/server-webdav.test.mjs",
+      "mode": "100644",
+      "sha256": "32042ec15d39a275b007bb926ee990b94422dda1b0d61949d73e2e5dbe07a981",
+      "bytes": 4196
+    },
+    {
+      "path": "tests/server.test.mjs",
+      "mode": "100644",
+      "sha256": "edab0f883b4050197303504c3528e0dcb8052f962fb083e36f590147d8f6c929",
+      "bytes": 8701
+    },
+    {
+      "path": "tests/task-form.test.mjs",
+      "mode": "100644",
+      "sha256": "89b41a6a064155f58b8f0977d17b04543db59f7018329c49986a1faea6717a0a",
+      "bytes": 3666
+    },
+    {
+      "path": "tests/transport.test.mjs",
+      "mode": "100644",
+      "sha256": "539f5c533cfc5e9fea91d3d221631bafa3e1a15fb09a84795628fd2c0aec5112",
+      "bytes": 1655
+    },
+    {
+      "path": "tests/webdav-client.test.mjs",
+      "mode": "100644",
+      "sha256": "f47a89a6ef042bd93c4e31188a28777d8b26c94db060bcde4678eb01149c8769",
+      "bytes": 7322
+    },
+    {
+      "path": "tests/webdav-service.test.mjs",
+      "mode": "100644",
+      "sha256": "3749b64063bb4abbf3d51a029fb6e36cbde6da4d7dd95c0e4b698acc96dc2305",
+      "bytes": 7069
+    },
+    {
+      "path": "tests/webdav-transport.test.mjs",
+      "mode": "100644",
+      "sha256": "14469c7a03a67f4eedaf356bb90bd6f0ebd4a4367f3b69041371a58c0e96c54c",
+      "bytes": 16231
+    },
+    {
+      "path": "third_party/gradle-wrapper/LICENSE",
+      "mode": "100644",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "bytes": 10174
+    },
+    {
+      "path": "web/app.mjs",
+      "mode": "100644",
+      "sha256": "7d0ea2150b636b6409de55afa8f3a076efdae4e49c274146dc0a3f18932a4919",
+      "bytes": 50435
+    },
+    {
+      "path": "web/calendar.mjs",
+      "mode": "100644",
+      "sha256": "9c269ae37d69db9c3b607220db896996b36de72d4e1a568bcac7841166be1a8a",
+      "bytes": 3270
+    },
+    {
+      "path": "web/drag-plan.mjs",
+      "mode": "100644",
+      "sha256": "b705f0590070434fbc7e0a9646969c32247a8858ba80cd04e7fd2d307ecd26cf",
+      "bytes": 4123
+    },
+    {
+      "path": "web/edit-session.mjs",
+      "mode": "100644",
+      "sha256": "a6257f430485dfa293152beec04e075e54ac73fd43341eaae63365630dc01613",
+      "bytes": 1147
+    },
+    {
+      "path": "web/index.html",
+      "mode": "100644",
+      "sha256": "52bc1ec00b9fe9f55241c33378d41aab2b97364d505d0ebd33cc097ab02682cb",
+      "bytes": 15341
+    },
+    {
+      "path": "web/launch-target.mjs",
+      "mode": "100644",
+      "sha256": "a2883b0bf884f352d1955d971593f998c08396961631977aa8059fbeb65afedc",
+      "bytes": 658
+    },
+    {
+      "path": "web/local-store.mjs",
+      "mode": "100644",
+      "sha256": "f50fda1e131bd14bd0815511f7f03682e0a8c7e66a9958c5818a1143d9f6b1b4",
+      "bytes": 3853
+    },
+    {
+      "path": "web/native-store.mjs",
+      "mode": "100644",
+      "sha256": "0ff2483483c804da852bfb845f820b5ef987599965b41b16f726824b3519dc39",
+      "bytes": 2369
+    },
+    {
+      "path": "web/styles.css",
+      "mode": "100644",
+      "sha256": "358606bf97549d0ae945eefdd1ecb66e3629269a8ca8fac6f6b478ccc3b2ae43",
+      "bytes": 42623
+    },
+    {
+      "path": "web/sw.js",
+      "mode": "100644",
+      "sha256": "55cbc3772ee4518963c65c54ea635114b03faa1d659dfc0c3516e9fa01894870",
+      "bytes": 1148
+    },
+    {
+      "path": "web/task-form.mjs",
+      "mode": "100644",
+      "sha256": "b1e3936d41f0e6bf79412a3f1dbdd6cd5a824a63b86a5b332b3d747c4b2a45f2",
+      "bytes": 1099
+    },
+    {
+      "path": "web/webdav-client.mjs",
+      "mode": "100644",
+      "sha256": "45e669f1fc3cd33e7ec21381a65e3e4c11298534f2dc77b4ff7a98775fc3fba5",
+      "bytes": 6307
+    }
+  ]
+}

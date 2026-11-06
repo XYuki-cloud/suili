@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <instrumentation android:name="app.flexible.calendar.WebDavInstrumentation" android:targetPackage="app.flexible.calendar" android:functionalTest="true" />
+    <instrumentation android:name="app.flexible.calendar.WidgetRenderInstrumentation" android:targetPackage="app.flexible.calendar" android:functionalTest="true" />
+</manifest>

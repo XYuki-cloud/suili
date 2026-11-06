@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Opt-in Xiaomi test/review build; this is deliberately absent from debug/release. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <meta-data android:name="miuiWidgetVersion" android:value="1" />
+        <receiver android:name=".MiuiCalendarWidget" android:label="随历 · 小米实验" android:process=":widgetProvider" android:exported="true">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/><action android:name="miui.appwidget.action.APPWIDGET_UPDATE"/></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/miui_calendar_widget"/>
+            <meta-data android:name="miuiWidget" android:value="true"/>
+            <meta-data android:name="miuiWidgetRefresh" android:value="exposure"/>
+            <meta-data android:name="miuiWidgetRefreshMinInterval" android:value="20000"/>
+        </receiver>
+    </application>
+</manifest>

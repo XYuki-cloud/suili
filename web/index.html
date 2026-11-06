@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#ffffff"><title>随历 · 日历与事项</title><link rel="stylesheet" href="/styles.css"></head>
+<body>
+<header class="topbar"><a class="brand" href="/" aria-label="随历首页"><span class="brand-icon" aria-hidden="true">▦</span><b>随历</b><span class="brand-note">日历与事项</span></a><div class="top-actions"><span id="sync-status" class="sync-status" aria-live="polite">本地保存</span><button id="sync-button" class="quiet">↻ 同步</button><button id="settings-button" class="quiet">设置与同步</button><button id="backup-button" class="quiet icon-btn" aria-label="备份与导入" title="备份与导入">↥</button></div></header>
+<main class="workspace">
+ <section class="planner" aria-label="日历计划">
+  <div class="planner-header"><div class="date-heading"><div id="view-caption" class="view-caption">连续四周</div><h2 id="date-title"></h2></div><button id="new-task-button" class="primary new-task-button"><span aria-hidden="true">＋</span> 新建事项</button></div>
+  <div class="planner-tools"><div class="calendar-controls"><div class="view-switch" role="group" aria-label="日历视图"><button data-view="month">整月</button><button data-view="four" class="active">四周</button><button data-view="week">单周</button></div><div class="date-navigation"><button id="previous" class="nav-btn" aria-label="上一段日期">‹</button><button id="today-button" class="today-btn">今天</button><button id="next" class="nav-btn" aria-label="下一段日期">›</button></div></div><details id="view-options" class="view-options"><summary>更多</summary><div class="view-options-content"><div class="font-control quick-font-control"><label for="quick-display-font">事项字号 <output for="quick-display-font" data-font-value>11 px</output></label><input id="quick-display-font" type="range" min="6" max="16" step="1" value="11" aria-label="事项字号"><div class="font-scale" aria-hidden="true"><span>6 · 更小</span><span>16 · 更大</span></div></div><button id="sample-button" class="text-button">添加示例</button><button id="draw-mode" class="draw-mode" aria-pressed="false"><span aria-hidden="true">▱</span> 划选新建</button><div class="calendar-legend"><span class="gesture-legend">拖动移动 <i aria-hidden="true">·</i> 两端拉伸 <i aria-hidden="true">·</i> 空白划选</span><span class="deadline-legend"><i class="legend-deadline" aria-hidden="true"></i> 截止日</span><label class="show-done"><input id="show-completed" type="checkbox">显示已完成</label></div></div></details></div>
+  <div id="calendar" class="calendar"></div><div class="planner-footer"><span>周事项放在每周下方，可随时拖入具体日期。</span></div><div id="conflict-notice" class="conflict-notice" hidden></div>
+  <div id="selection-toolbar" class="selection-toolbar" role="region" aria-label="选中事项操作" hidden><div class="selection-copy"><strong id="selected-title"></strong><span id="selected-plan"></span></div><button id="selection-close" class="close selection-close" aria-label="取消选中">×</button><div class="selection-actions"><button id="selection-complete" class="selection-primary">✓ 完成</button><button id="selection-plan">安排日期</button><button id="selection-remove-segment" hidden>移除此段</button><button id="selection-edit">编辑</button><button id="selection-deadline">调整截止日</button><button id="selection-unplan">取消全部安排</button><button id="selection-delete" class="danger-text">删除事项</button></div><div id="planning-controls" class="planning-controls" hidden><button id="selection-pick-range" aria-pressed="false">点选起止</button><span id="planning-note" role="status"></span></div></div>
+ </section>
+ <section id="unplanned-panel" class="unplanned-panel" aria-label="未安排事项">
+  <div class="unplanned-heading"><h2>未安排事项</h2><span class="unplanned-note"><span class="small-dot" aria-hidden="true"></span> 自动保存在本地</span></div>
+  <div class="unplanned-controls"><div class="list-toolbar"><div class="filter-tabs" role="group" aria-label="事项筛选"><button data-filter="unplanned" class="active">待安排 <span id="unplanned-count">0</span></button><button data-filter="replan">待重排</button><button data-filter="all">全部</button></div><button id="undo-button" class="undo" disabled aria-label="撤销最近一次修改" title="撤销最近一次修改">↶</button></div><input id="search" type="search" placeholder="搜索事项" aria-label="搜索事项" class="search"></div>
+  <div id="task-list" class="task-list" aria-live="polite"></div><div class="unplanned-entry"><form id="quick-form" class="quick-form"><label for="quick-input">记下一件事</label><textarea id="quick-input" rows="1" maxlength="12000" placeholder="输入事项，稍后安排日期" aria-describedby="quick-hint"></textarea><div class="input-footer"><span id="quick-hint">Enter 添加 · 支持多行粘贴</span><button class="round-add" type="submit" aria-label="添加事项">＋</button></div></form></div><div id="inbox-drop" class="inbox-drop"><span aria-hidden="true">↩</span> 将事项拖到这里，取消日期安排</div>
+ </section>
+</main>
+<dialog id="quick-create" class="quick-create"><form id="quick-create-form">
+ <div class="dialog-heading"><h2>添加事项</h2><button type="button" data-close class="close" aria-label="关闭">×</button></div>
+ <div id="quick-range-label" class="quick-range-label"></div>
+ <label for="quick-title">事项名称</label><input id="quick-title" required maxlength="300" autocomplete="off" placeholder="这段时间想做什么？">
+ <label class="task-toggle"><input id="quick-has-deadline" type="checkbox"><span>有截止日<small>需要在某天前完成</small></span></label>
+ <section id="quick-deadline-options" class="task-timing-section" hidden>
+  <label>截止日期<input id="quick-deadline" type="date"></label>
+  <label class="task-toggle"><input id="quick-allocate-time" type="checkbox"><span>现在安排处理时间<small>也可以先保存，之后在日历上安排</small></span></label>
+  <div id="quick-plan-fields" hidden>
+   <label>处理时间<select id="quick-plan-kind"><option value="day">某一天</option><option value="week">这一周找时间</option><option value="range">连续几天</option></select></label>
+   <div class="date-fields"><label>开始日期<input id="quick-plan-start" type="date"></label><label id="quick-end-label">结束日期<input id="quick-plan-end" type="date"></label></div>
+   <p class="timing-note">处理时间和截止日分别保存，拖动安排不会改变截止日。</p>
+  </div>
+ </section>
+ <button type="button" id="quick-calendar" class="calendar-link">保存并在日历上分段安排 →</button>
+ <p id="quick-create-error" class="error" role="alert"></p>
+ <div class="dialog-footer"><button type="button" id="quick-details" class="quiet">更多选项</button><button type="submit" class="primary">添加事项</button></div>
+</form></dialog>
+<dialog id="editor"><form id="editor-form">
+ <div class="dialog-heading"><h2>编辑事项</h2><button type="button" data-close class="close" aria-label="关闭">×</button></div>
+ <input id="task-id" type="hidden"><label>事项<input id="task-title" required maxlength="300" autocomplete="off"></label>
+ <label class="task-toggle"><input id="task-has-deadline" type="checkbox"><span>有截止日<small>需要在某天前完成</small></span></label>
+ <section id="task-deadline-options" class="task-timing-section" hidden>
+  <label>截止日期<input id="task-deadline" type="date"></label>
+  <label class="task-toggle"><input id="task-allocate-time" type="checkbox"><span>安排处理时间<small>取消安排也会保留截止日</small></span></label>
+ </section>
+ <div id="editor-plan-fields">
+  <label id="plan-kind-field"><span id="plan-kind-label">日期安排</span><select id="plan-kind"><option value="none">暂不安排</option><option value="day">某一天</option><option value="week">这一周内完成</option><option value="range">连续几天</option><option value="segments" hidden>多个时间段</option></select></label>
+  <div class="date-fields" id="date-fields"><label id="start-label">开始日期<input id="plan-start" type="date"></label><label id="end-label">结束日期<input id="plan-end" type="date"></label></div>
+  <div id="editor-segments" class="editor-segments" hidden></div>
+ </div>
+ <button type="button" id="editor-calendar" class="calendar-link">保存并在日历上安排 →</button>
+ <label>备注<textarea id="task-notes" rows="3" maxlength="10000"></textarea></label><div class="color-row" id="color-row" aria-label="事项颜色"></div>
+ <div class="quick-moves"><button type="button" id="tomorrow">移到明天</button><button type="button" id="next-week">移到下周</button><button type="button" id="toggle-done">标为完成</button></div>
+ <p id="editor-error" class="error" role="alert"></p><div class="dialog-footer"><button type="button" id="delete-task" class="danger-text">删除事项</button><button type="submit" class="primary">保存安排</button></div>
+</form></dialog>
+<dialog id="batch-dialog"><div class="dialog-heading"><h2>批量添加事项</h2><button data-close class="close" aria-label="关闭">×</button></div><p class="muted">每行添加一件事项，日期可以稍后安排。</p><textarea id="batch-input" rows="9" maxlength="30000" aria-label="批量事项，每行一条"></textarea><p id="batch-error" class="error" role="alert"></p><div class="dialog-footer"><button data-close class="quiet">取消</button><button id="batch-confirm" class="primary">全部添加</button></div></dialog>
+<dialog id="settings">
+ <div class="dialog-heading"><h2>设置与同步</h2><button data-close class="close" aria-label="关闭">×</button></div>
+ <section class="display-settings" aria-labelledby="display-heading"><h3 id="display-heading">日历显示</h3><div class="display-fields"><label for="display-density">布局<select id="display-density" aria-describedby="display-note"><option value="compact">紧凑</option><option value="comfortable">宽松</option></select></label><div class="font-control"><label for="display-font">事项字号 <output for="display-font" data-font-value>11 px</output></label><input id="display-font" type="range" min="6" max="16" step="1" value="11" aria-describedby="display-note"><div class="font-scale" aria-hidden="true"><span>6 · 更小</span><span>16 · 更大</span></div></div></div><p id="display-note" class="field-note">紧凑布局可在一屏查看更多日期和事项；宽松布局留出更多点按空间。拖动滑条实时调整事项字号（6–16 px），也可在日历的“更多”中边看边调。字号和布局只影响此设备的显示。</p></section>
+ <div class="native-actions"><button id="native-settings" class="primary" hidden>同步设置</button><button id="native-widget" class="secondary" hidden>添加桌面小部件</button></div>
+ <div class="web-connection"><p class="muted">在手机「随历」的同步设置中填入服务地址和连接码。两端离线修改都会先保存在本地。</p><label>服务地址<select id="server-address" aria-label="服务地址"></select></label><label>连接码<div class="secret-field"><input id="pair-token" type="password" readonly autocomplete="off"><button id="copy-token" class="quiet">复制</button><button id="show-token" class="quiet">显示</button></div></label><p id="setup-note" class="muted"></p>
+  <form id="webdav-form" class="webdav-settings" autocomplete="off">
+   <h3>WebDAV 同步</h3><p class="muted">连接专用同步文件，让电脑和手机合并事项与修改记录。密码由本机服务保存，不写入日历备份。</p>
+   <p id="webdav-status" class="webdav-status" role="status">正在读取同步设置…</p>
+   <fieldset id="webdav-fields" class="webdav-fields">
+    <label class="webdav-toggle"><input id="webdav-enabled" type="checkbox">启用 WebDAV 同步</label>
+    <label for="webdav-url">完整同步文件地址<input id="webdav-url" type="url" inputmode="url" autocomplete="off" spellcheck="false" placeholder="https://dav.example/随历/calendar.json" aria-describedby="webdav-url-note"></label>
+    <p id="webdav-url-note" class="field-note">请填写专用 JSON 文件的完整地址；父目录需提前建立，文件可在首次同步时创建。电脑和手机应使用同一文件。</p>
+    <label for="webdav-username">用户名<input id="webdav-username" autocomplete="off" spellcheck="false" maxlength="500" placeholder="匿名连接时留空"></label>
+    <label for="webdav-password">密码<input id="webdav-password" type="password" autocomplete="off" maxlength="4000" placeholder="输入 WebDAV 密码" aria-describedby="webdav-password-note"></label>
+    <p id="webdav-password-note" class="field-note">用户名和密码均留空可匿名连接。更换地址或用户名后，请重新输入密码。</p>
+    <label id="webdav-clear-label" class="webdav-toggle" hidden><input id="webdav-clear-password" type="checkbox">清除已保存密码（匿名连接时也请清空用户名）</label>
+    <p class="field-note">点击「保存并同步」会读写该文件。关闭同步后保存，可保留地址和账号以便下次启用。</p>
+    <div class="webdav-actions"><button id="webdav-save" class="primary" type="submit">保存设置</button><button id="webdav-sync" class="secondary" type="button" disabled>立即同步</button></div>
+   </fieldset>
+   <p id="webdav-error" class="error" role="alert"></p>
+  </form>
+  <p class="muted">小米负一屏需要对应系统和小部件环境，安卓应用内提供支持检测。</p>
+ </div>
+</dialog>
+<dialog id="backup"><div class="dialog-heading"><h2>备份与导入</h2><button data-close class="close" aria-label="关闭">×</button></div><p class="muted">备份包含事项与修改记录，不包含连接码。导入会合并内容，并保留并发修改供你选择。</p><button id="export-button" class="primary">导出 JSON 备份</button><button id="native-import-button" class="secondary" hidden>选择备份文件</button><label class="file-label">从备份恢复<input id="import-file" type="file" accept=".json,application/json"></label><div id="import-preview" hidden><p id="import-summary"></p><button id="import-confirm" class="primary">确认合并</button></div><p id="import-error" class="error" role="alert"></p></dialog>
+<dialog id="conflicts"><div class="dialog-heading"><h2>选择事项版本</h2><button data-close class="close" aria-label="关闭">×</button></div><p class="muted">这件事在两端都改过。选择要保留的版本后，另一版本仍在备份记录中。</p><div id="conflict-list"></div></dialog>
+<div id="gesture-preview" class="gesture-preview" aria-hidden="true"></div><div id="gesture-hint" class="gesture-hint" role="status" hidden></div><div id="toast" class="toast" role="status" hidden></div><div id="fatal" class="fatal" role="alert" hidden></div>
+<script type="module" src="/app.mjs"></script>
+</body></html>

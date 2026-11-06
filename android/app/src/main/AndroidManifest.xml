@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <queries>
+        <provider android:authorities="com.miui.personalassistant.widget.external" />
+        <intent><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.HOME" /></intent>
+    </queries>
+    <application android:label="随历" android:icon="@drawable/ic_calendar" android:theme="@style/AppTheme" android:allowBackup="false" android:usesCleartextTraffic="true" android:supportsRtl="true">
+        <service android:name=".SyncJobService" android:process=":widgetProvider" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="true"/>
+        <activity android:name=".PlannerActivity" android:exported="true" android:launchMode="singleTask" android:configChanges="orientation|screenSize|keyboardHidden" android:windowSoftInputMode="adjustResize">
+            <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <receiver android:name=".CalendarWidget" android:label="@string/widget_label" android:exported="false">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /><action android:name="android.intent.action.BOOT_COMPLETED" /><action android:name="android.intent.action.DATE_CHANGED" /><action android:name="android.intent.action.TIME_SET" /><action android:name="android.intent.action.TIMEZONE_CHANGED" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/calendar_widget" />
+        </receiver>
+        <receiver android:name=".WidgetPinReceiver" android:exported="false" />
+    </application>
+</manifest>

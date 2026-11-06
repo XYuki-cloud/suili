@@ -1,0 +1,20 @@
+* text=auto eol=lf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+*.jar binary
+
+# Defense in depth for source archives. Local records are not public documentation.
+.local export-ignore
+.qa export-ignore
+.private export-ignore
+.codex export-ignore
+.vscode export-ignore
+.idea export-ignore
+AGENTS.md export-ignore
+CLAUDE.md export-ignore
+CODEX.md export-ignore
+artifacts export-ignore
+node_modules export-ignore
+docs/verification.md export-ignore
+docs/plans export-ignore
+docs/specs export-ignore
